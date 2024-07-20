@@ -51,10 +51,10 @@ except Exception as e:
     print(e)
 
 # submit the form
-# submit_button = WebDriverWait(driver, 20).until(
-#     EC.presence_of_element_located((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span/span'))
-# )
-# submit_button.click()
+submit_button = WebDriverWait(driver, 20).until(
+    EC.presence_of_element_located((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span/span'))
+)
+submit_button.click()
 
 # Wait for 1 minute to check  (for personal use)
 time.sleep(60)
