@@ -18,8 +18,8 @@ def index():
         # Create email message
         msg = Message(subject=["Python (Selenium) Assignment - Abdul Raheman,"],
                       sender=app.config['MAIL_USERNAME'],
-                      recipients=['accordbenze@gmail.com'],
-                      cc=['accordbenze@gmail.com'])
+                      recipients=['tech@themedius.ai'],
+                      cc=['hr@themedius.ai'])
         msg.body = """
 Dear Tech Team
 Please find below the required items for the assignment:
@@ -30,6 +30,8 @@ Please find below the required items for the assignment:
 5. Links to past projects samples:
    - Zoom Automation Project: https://drive.google.com/drive/folders/1sBEfcPQ4qOOeRR5petRDECzQqWYfwd1L?usp=sharing
 6. I Confirm my availability to work full time (10 am to 7 pm) for the next 3-6 months
+
+
 Best Regards,
 Abdul Raheman Shaikh
 """
@@ -41,7 +43,7 @@ Abdul Raheman Shaikh
             msg.attach("Screenshot_2024-07-20_192036.png", "image/png", img.read())
         
         mail.send(msg)
-        return "Message sent!"
+        return "Mail sent! Thank you, Eager to hear back from you."
 
 if __name__ == '__main__':
     app.run(debug=True)
